@@ -1,0 +1,132 @@
+.section {
+  max-width: 1300px;
+  margin: auto;
+  padding: 5rem 2rem;
+  background-color:  #EDEDED;
+}
+
+.wrapper {
+  width: 100%;
+  background: #EDEDED;
+}
+
+/* Header -------------------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  max-width: 600px;
+}
+
+.subtitle {
+    font-family: "DM Sans", sans-serif;
+  max-width: 460px;
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+/* Grid ---------------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Card ---------------------- */
+
+.card {
+  background: #f9f9f9;
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.image {
+  width: 90%;
+  border-radius: 12px;
+}
+
+/* Text inside card */
+.cardTitle {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-top: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.cardDesc {
+font-family: "DM Sans", sans-serif;
+  margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+/* Bullet points */
+.bullets {
+  list-style: none;
+  margin-top: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bullets li {
+    font-family: "DM Sans", sans-serif;
+  padding-left: 1.5rem;
+  position: relative;
+  opacity: 0.8;
+}
+
+.bullets li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+
+.horizontal {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* image inside horizontal layout */
+.horizontal .image {
+  width: 40%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.textBlock {
+  flex: 1;
+}
+
+
+/* Responsive ---------------- */
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .full {
+    grid-column: span 1;
+  }
+}

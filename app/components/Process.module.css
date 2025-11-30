@@ -1,0 +1,135 @@
+.wrapper {
+  max-width: 1300px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+/* Title */
+.heading {
+  font-family: "DM Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+/* Steps horizontal row */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.steps::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #cfcfcf;
+  z-index: 0;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background: #4F46E5;
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+  margin-bottom: .4rem;
+}
+
+.stepTitle {
+    font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.stepDesc {
+    font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 1.8rem;
+  border-radius: 14px;
+}
+
+.cardHeader {
+    font-family: "DM Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+/* list */
+.list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+}
+
+.list li {
+    font-family: "DM Sans", sans-serif;
+  list-style: disc;
+  font-size: .95rem;
+  opacity: 0.8;
+}
+
+/* Right card logos */
+.cardTitleRight {
+  margin-bottom: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.logoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .steps {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .steps::before {
+    display: none;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}

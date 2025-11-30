@@ -1,0 +1,33 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 50;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: black;
+  font-size: 1.3rem;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  
+  .mobileMenu {
+    display: block;
+  }
+}
