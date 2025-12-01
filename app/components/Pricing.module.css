@@ -1,0 +1,120 @@
+.section {
+ max-width: 1300px;
+  margin: auto;
+  padding: 5rem 2rem;
+  background-color:  #EDEDED;
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  background: #EDEDED;
+}
+
+/* ---------- Typography ---------- */
+
+.heading {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  opacity: 0.85;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.5;
+}
+
+/* ---------- Layout ---------- */
+
+.grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ---------- Card ---------- */
+
+.card {
+  background: white;
+  border: 1px solid #dcdcdc;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.featured {
+  border-width: 2px;
+  border-color: #ff7e32;
+  box-shadow: 0px 4px 16px rgba(0,0,0,0.08);
+}
+
+.cardTitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.cardSubtitle {
+  margin-top: 0.6rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.small {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 0.6rem;
+}
+
+.price {
+    font-family: "Abhaya Libre", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  margin-top: 0.2rem;
+}
+
+/* Lists */
+
+.list {
+  margin-top: 1.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-left: 0;
+}
+
+.list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+.list li img {
+  margin-top: 3px; 
+}
+
+
+/* Responsive */
+
+@media (max-width: 950px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

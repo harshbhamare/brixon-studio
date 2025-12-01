@@ -80,7 +80,7 @@ export default function Services() {
               </h3>
 
               <p className={styles.cardDesc}>
-                Consistent, strategic content builds recognition — not random posts.
+                Consistent, strategic content builds recognition - not random posts.
                 Paired with authentic creator collaborations, it drives measurable growth.
               </p>
 

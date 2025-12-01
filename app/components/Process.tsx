@@ -1,76 +1,61 @@
 import Image from "next/image";
 import styles from "./Process.module.css";
 
-export default function Process() {
+export default function WorkSection() {
   return (
-    <section className={styles.wrapper}>
-      
-      {/* --- Title --- */}
+    <section className={styles.section}>
+
+      {/* --- Heading --- */}
       <h2 className={styles.heading}>How we work?</h2>
 
-      {/* --- Step Progress Row --- */}
-      <div className={styles.steps}>
-        <div className={styles.step}>
-          <span className={styles.number}>1</span>
-          <p className={styles.stepTitle}>Discovery Call</p>
-          <p className={styles.stepDesc}>Understand your goals</p>
-        </div>
-
-        <div className={styles.step}>
-          <span className={styles.number}>2</span>
-          <p className={styles.stepTitle}>Strategy & Planning</p>
-          <p className={styles.stepDesc}>Blueprint the solution</p>
-        </div>
-
-        <div className={styles.step}>
-          <span className={styles.number}>3</span>
-          <p className={styles.stepTitle}>Design & Build</p>
-          <p className={styles.stepDesc}>UI/UX + development</p>
-        </div>
-
-        <div className={styles.step}>
-          <span className={styles.number}>4</span>
-          <p className={styles.stepTitle}>Launch & Optimize</p>
-          <p className={styles.stepDesc}>Test, deploy & refine</p>
-        </div>
+      {/* --- Timeline --- */}
+      <div className={styles.timeline}>
+        {[
+          { num: "1", title: "Discovery Call", desc: "Understand your goals" },
+          { num: "2", title: "Strategy & Planning", desc: "Blueprint the solution" },
+          { num: "3", title: "Design & Build", desc: "UI/UX + development" },
+          { num: "4", title: "Launch & Optimize", desc: "Test, deploy & refine" }
+        ].map((step, i) => (
+          <div className={styles.step} key={i}>
+            <div className={styles.circle}>{step.num}</div>
+            <p className={styles.stepTitle}>{step.title}</p>
+            <p className={styles.stepDesc}>{step.desc}</p>
+          </div>
+        ))}
       </div>
 
-      {/* --- Cards Row --- */}
-      <div className={styles.cards}>
-        
-        {/* Left card */}
+      {/* --- Cards Section --- */}
+      <div className={styles.cardGrid}>
+
+        {/* Left Card */}
         <div className={styles.card}>
           <div className={styles.cardHeader}>
-            <Image
-              src="/images/rocket.png"
-              width={28}
-              height={28}
-              alt="Support Icon"
-            />
+            <Image src="/images/rocket.png" alt="Icon" width={26} height={26} />
             <h3>Growth Support & After Sales Services</h3>
           </div>
 
           <ul className={styles.list}>
-            <li>Growth doesn’t stop after delivery — that’s where it actually starts.</li>
-            <li>We offer ongoing support, free maintenance, and improvement cycles.</li>
-            <li>Your system evolves, performs, and stays future-ready.</li>
+            <li>Growth doesn’t stop after delivery - that’s where it starts.</li>
+            <li>Ongoing support, free maintenance & improvement cycles.</li>
+            <li>Ensures your system evolves and stays future-ready.</li>
           </ul>
         </div>
 
-        {/* Right Card - Client Logos */}
+        {/* Right Card */}
         <div className={styles.card}>
-          <h3 className={styles.cardTitleRight}>Our Esteemed Clients</h3>
-
-          <div className={styles.logoGrid}>
-            <Image src="/images/clients/mit-logo.png" width={150} height={50} alt="Client" />
-            <Image src="/images/clients/hustler-logo.png" width={150} height={50} alt="Client" />
-            <Image src="/images/clients/rivoox-logo.png" width={150} height={50} alt="Client" />
-            <Image src="/images/clients/slipsub-logo.png" width={150} height={50} alt="Client" />
-            <Image src="/images/clients/gradebin-logo.png" width={150} height={50} alt="Client" />
+          <h3 className={styles.clientTitle}>Our Esteemed Clients</h3>
+          <div className={styles.logos}>
+            <Image src="/images/clients/mit-logo.png" width={150} height={45} alt="client" />
+            <Image src="/images/clients/hustler-logo.png" width={150} height={45} alt="client" />
+            <Image src="/images/clients/rivoox-logo.png" width={150} height={45} alt="client" />
+            <Image src="/images/clients/gradebin-logo.png" width={150} height={45} alt="client" />
+            <Image src="/images/clients/slipsub-logo.png" width={130} height={50} alt="client" />
           </div>
         </div>
-      </div>
 
+      </div>
     </section>
+
+    
   );
 }
