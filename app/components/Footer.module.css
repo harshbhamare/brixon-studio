@@ -1,0 +1,104 @@
+.footer {
+  background: #101A29;
+  color: #fff;
+  padding: 4.5rem 2rem 2rem;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+/* Brand Section */
+.brand {
+  max-width: 350px;
+}
+
+.logoRow img {
+  margin-bottom: 1.2rem;
+}
+
+.description {
+  opacity: 0.7;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 1.8rem;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Social Icons */
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social a {
+  opacity: 0.8;
+  transition: 0.25s;
+}
+
+.social a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Link Columns */
+.linksSection {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.linkColumn {
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.linkColumn h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.linkColumn a {
+  font-size: 0.95rem;
+  opacity: 0.75;
+  text-decoration: none;
+  transition: 0.25s;
+  font-family: "DM Sans", sans-serif;
+}
+
+.linkColumn a:hover {
+  opacity: 1;
+}
+
+/* Bottom Bar */
+.bottom {
+  text-align: center;
+  margin-top: 3.5rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.9rem;
+  opacity: 0.6;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .linksSection {
+    flex-direction: column;
+    gap: 2.2rem;
+  }
+}

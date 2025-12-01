@@ -5,7 +5,7 @@ import Process from "./components/Process";
 import Portfolio from "./components/Portfolio";
 import Pricing from "./components/Pricing";
 import Faq from "./components/Faq";
-import ContactForm from "./components/ContactForm";
+import Cta from "./components/Cta";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       <Portfolio />
       <Pricing />
       <Faq />
-      <ContactForm />
+      <Cta />
       <Footer />
     </main>
   );

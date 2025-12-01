@@ -1,0 +1,98 @@
+.wrapper {
+  width: 100%;
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Stronger card background */
+.container {
+  width: 100%;
+  max-width: 1300px;
+  padding: 3.5rem 3.8rem;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #1f202a, #1F2463, #4A53FF);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 20px 40px rgba(0,0,0,0.25);
+}
+
+/* Accent circle pattern */
+.container::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(255,255,255,0.35), rgba(26, 8, 8, 0) 70%);
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+/* Text */
+.title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  margin-top: 0.6rem;
+  font-size: 1.15rem;
+  opacity: 0.9;
+  max-width: 500px;
+}
+
+/* Buttons */
+.actions {
+  margin-top: 2.2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Solid CTA button */
+.primaryBtn {
+  background: #ffffff;
+  color: #1A1D37;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.25s ease;
+  box-shadow: 0px 8px 20px rgba(255,255,255,0.25);
+}
+.primaryBtn:hover {
+  transform: translateY(-3px);
+  background: #f2f2f2;
+}
+
+/* Outline button with stronger border */
+.secondaryBtn {
+  border: 2px solid rgba(255,255,255,0.9);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.05);
+  transition: 0.25s ease;
+}
+.secondaryBtn:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-3px);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .container {
+    padding: 2.5rem;
+  }
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
