@@ -1,0 +1,93 @@
+.container {
+  min-height: 100vh;
+  background: #f9fafb;
+  padding: 100px 2rem 4rem;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  color: #4A53FF;
+  text-decoration: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  transition: 0.2s;
+}
+
+.backLink:hover {
+  opacity: 0.7;
+}
+
+.title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1A1D37;
+  margin-bottom: 0.5rem;
+}
+
+.updated {
+  font-family: "DM Sans", sans-serif;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1A1D37;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-family: "DM Sans", sans-serif;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.section ul {
+  font-family: "DM Sans", sans-serif;
+  color: #444;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.section li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 80px 1rem 2rem;
+  }
+
+  .content {
+    padding: 2rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .section h2 {
+    font-size: 1.3rem;
+  }
+}

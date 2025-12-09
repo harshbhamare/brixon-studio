@@ -50,10 +50,10 @@ export default function Footer() {
 
           <div className={styles.linkColumn}>
             <h4>Resources</h4>
-            <a href="#">Privacy policy</a>
-            <a href="#">Refund policy</a>
+            <a href="/privacy-policy">Privacy policy</a>
+            <a href="/refund-policy">Refund policy</a>
             <a href="#">Raise complain</a>
-            <a href="#">Terms & Conditions</a>
+            <a href="/terms-conditions">Terms & Conditions</a>
           </div>
 
         </div>

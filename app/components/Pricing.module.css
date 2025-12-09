@@ -118,3 +118,29 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.4rem;
+  }
+
+  .list li {
+    font-size: 0.95rem;
+  }
+}

@@ -1,14 +1,22 @@
+'use client';
+
 import Image from "next/image";
 import styles from "./Process.module.css";
+import { motion } from "framer-motion";
 
 export default function WorkSection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="about">
+      <motion.h2 
+        className={styles.heading}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        How we work?
+      </motion.h2>
 
-      {/* --- Heading --- */}
-      <h2 className={styles.heading}>How we work?</h2>
-
-      {/* --- Timeline --- */}
       <div className={styles.timeline}>
         {[
           { num: "1", title: "Discovery Call", desc: "Understand your goals" },
@@ -16,33 +24,48 @@ export default function WorkSection() {
           { num: "3", title: "Design & Build", desc: "UI/UX + development" },
           { num: "4", title: "Launch & Optimize", desc: "Test, deploy & refine" }
         ].map((step, i) => (
-          <div className={styles.step} key={i}>
+          <motion.div 
+            className={styles.step} 
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+          >
             <div className={styles.circle}>{step.num}</div>
             <p className={styles.stepTitle}>{step.title}</p>
             <p className={styles.stepDesc}>{step.desc}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
 
-      {/* --- Cards Section --- */}
       <div className={styles.cardGrid}>
-
-        {/* Left Card */}
-        <div className={styles.card}>
+        <motion.div 
+          className={styles.card}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <div className={styles.cardHeader}>
             <Image src="/images/rocket.png" alt="Icon" width={26} height={26} />
             <h3>Growth Support & After Sales Services</h3>
           </div>
 
           <ul className={styles.list}>
-            <li>Growth doesn’t stop after delivery - that’s where it starts.</li>
+            <li>Growth doesn't stop after delivery - that's where it starts.</li>
             <li>Ongoing support, free maintenance & improvement cycles.</li>
             <li>Ensures your system evolves and stays future-ready.</li>
           </ul>
-        </div>
+        </motion.div>
 
-        {/* Right Card */}
-        <div className={styles.card}>
+        <motion.div 
+          className={styles.card}
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h3 className={styles.clientTitle}>Our Esteemed Clients</h3>
           <div className={styles.logos}>
             <Image src="/images/clients/mit-logo.png" width={150} height={45} alt="client" />
@@ -51,11 +74,8 @@ export default function WorkSection() {
             <Image src="/images/clients/gradebin-logo.png" width={150} height={45} alt="client" />
             <Image src="/images/clients/slipsub-logo.png" width={130} height={50} alt="client" />
           </div>
-        </div>
-
+        </motion.div>
       </div>
     </section>
-
-    
   );
 }

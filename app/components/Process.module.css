@@ -141,3 +141,25 @@
     text-align: left;
   }
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .cardHeader {
+    font-size: 1.2rem;
+  }
+
+  .list li {
+    font-size: 1rem;
+  }
+
+  .logos {
+    justify-content: center;
+  }
+}

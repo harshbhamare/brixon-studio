@@ -61,6 +61,8 @@
   font-weight: 500;
   text-decoration: none;
   transition: 0.25s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .primaryBtn:hover {
@@ -77,10 +79,44 @@
   border-radius: 8px;
   text-decoration: none;
   transition: 0.25s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .secondaryBtn img {
   height: 10px;
   width: auto;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  .content {
+    margin-top: 150px;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 

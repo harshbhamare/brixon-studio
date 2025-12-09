@@ -1,26 +1,43 @@
+'use client';
+
 import Image from "next/image";
 import styles from "./Services.module.css";
+import { motion } from "framer-motion";
 
 export default function Services() {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} id="services">
       <section className={styles.section}>
-        {/* Top Text Block */}
-        <div className={styles.header}>
+        <motion.div 
+          className={styles.header}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className={styles.title}>
             The complete platform for modern digital solutions
           </h2>
           <p className={styles.subtitle}>
             We provide end-to-end design, development, and digital growth services
-            that help businesses launch, scale, and stand out in today’s competitive online world.
+            that help businesses launch, scale, and stand out in today's competitive online world.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Service Cards */}
         <div className={styles.grid}>
-
-          {/* Card 1 */}
-          <div className={styles.card}>
+          <motion.div 
+            className={styles.card}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
             <Image
               src="/images/card1.jpg"
               alt="Website Design & Development"
@@ -32,10 +49,16 @@ export default function Services() {
             <p className={styles.cardDesc}>
               Websites built for performance, SEO, and conversion — not just aesthetics.
             </p>
-          </div>
+          </motion.div>
 
-          {/* Card 2 */}
-          <div className={styles.card}>
+          <motion.div 
+            className={styles.card}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <Image
               src="/images/card2.jpg"
               alt="Mobile App Development"
@@ -47,10 +70,16 @@ export default function Services() {
             <p className={styles.cardDesc}>
               Custom apps to enhance customer experience, loyalty, and automation.
             </p>
-          </div>
+          </motion.div>
 
-          {/* Card 3 */}
-          <div className={styles.card}>
+          <motion.div 
+            className={styles.card}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             <Image
               src="/images/card3.jpg"
               alt="UI/UX Design"
@@ -62,10 +91,16 @@ export default function Services() {
             <p className={styles.cardDesc}>
               User-centered design that feels intuitive, premium, and effortless.
             </p>
-          </div>
+          </motion.div>
 
-          {/* Full Width Card */}
-          <div className={`${styles.card} ${styles.full} ${styles.horizontal}`}>
+          <motion.div 
+            className={`${styles.card} ${styles.full} ${styles.horizontal}`}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             <Image
               src="/images/card4.jpg"
               alt="Social Media Management & Influencer Marketing"
@@ -90,9 +125,7 @@ export default function Services() {
                 <li>Managed with measurable performance</li>
               </ul>
             </div>
-          </div>
-
-
+          </motion.div>
         </div>
       </section>
     </section>

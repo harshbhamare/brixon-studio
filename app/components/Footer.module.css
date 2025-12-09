@@ -102,3 +102,21 @@
     gap: 2.2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .brand {
+    max-width: 100%;
+  }
+
+  .linksSection {
+    width: 100%;
+  }
+
+  .linkColumn {
+    width: 100%;
+  }
+}
