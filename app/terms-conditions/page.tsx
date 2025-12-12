@@ -106,8 +106,8 @@ export default function TermsConditions() {
         <section className={styles.section}>
           <h2>12. Contact Information</h2>
           <p>For questions about these Terms & Conditions:</p>
-          <p>Email: legal@brixontech.com</p>
-          <p>Phone: +91 XXXXXXXXXX</p>
+          <p>Email: brixontech@gmail.com</p>
+          <p>Phone: +91 7387883221</p>
         </section>
       </div>
     </div>

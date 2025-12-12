@@ -124,7 +124,7 @@ export default function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
               required
               value={formData.contact}
               onChange={(e) => setFormData({...formData, contact: e.target.value})}
-              placeholder="+91 XXXXXXXXXX"
+              placeholder="+91 7387883221"
             />
           </div>
 

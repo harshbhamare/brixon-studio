@@ -9,8 +9,15 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "framer-motion": "^12.23.25",
+<<<<<<< HEAD
     "next": "16.0.7",
+=======
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.0.1",
+    "next": "16.0.5",
+>>>>>>> ab715a1 (admin panel added and bug fixes)
     "nodemailer": "^7.0.11",
     "react": "19.2.0",
     "react-dom": "19.2.0",
@@ -22,6 +29,7 @@
     "@types/nodemailer": "^7.0.4",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "baseline-browser-mapping": "^2.9.6",
     "eslint": "^9",
     "eslint-config-next": "16.0.5",
     "tailwindcss": "^4",

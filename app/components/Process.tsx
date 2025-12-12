@@ -19,22 +19,58 @@ export default function WorkSection() {
 
       <div className={styles.timeline}>
         {[
-          { num: "1", title: "Discovery Call", desc: "Understand your goals" },
-          { num: "2", title: "Strategy & Planning", desc: "Blueprint the solution" },
-          { num: "3", title: "Design & Build", desc: "UI/UX + development" },
-          { num: "4", title: "Launch & Optimize", desc: "Test, deploy & refine" }
+          { 
+            num: "01", 
+            title: "Discovery Call", 
+            desc: "Understand your goals",
+            details: "We dive deep into your business objectives, target audience, and project requirements to create a solid foundation.",
+            iconPath: "/images/process/discovery.png"
+          },
+          { 
+            num: "02", 
+            title: "Strategy & Planning", 
+            desc: "Blueprint the solution",
+            details: "Detailed project roadmap, technology stack selection, and timeline planning with clear milestones.",
+            iconPath: "/images/process/strategy.png"
+          },
+          { 
+            num: "03", 
+            title: "Design & Build", 
+            desc: "UI/UX + development",
+            details: "Iterative design process with regular feedback loops, followed by clean, scalable development.",
+            iconPath: "/images/process/design.png"
+          },
+          { 
+            num: "04", 
+            title: "Launch & Optimize", 
+            desc: "Test, deploy & refine",
+            details: "Thorough testing, smooth deployment, and continuous optimization based on real user data.",
+            iconPath: "/images/process/launch.png"
+          }
         ].map((step, i) => (
           <motion.div 
             className={styles.step} 
             key={i}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
+            transition={{ duration: 0.6, delay: i * 0.15 }}
           >
-            <div className={styles.circle}>{step.num}</div>
-            <p className={styles.stepTitle}>{step.title}</p>
-            <p className={styles.stepDesc}>{step.desc}</p>
+            <div className={styles.stepCard}>
+              <div className={styles.stepNumber}>{step.num}</div>
+              <div className={styles.stepIcon}>
+                <Image 
+                  src={step.iconPath} 
+                  alt={step.title}
+                  width={40}
+                  height={40}
+                />
+              </div>
+              <h3 className={styles.stepTitle}>{step.title}</h3>
+              <p className={styles.stepDesc}>{step.desc}</p>
+              <p className={styles.stepDetails}>{step.details}</p>
+            </div>
+            {i < 3 && <div className={styles.connector}></div>}
           </motion.div>
         ))}
       </div>

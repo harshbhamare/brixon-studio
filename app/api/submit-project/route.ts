@@ -1,14 +1,30 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import dbConnect from '@/lib/mongodb';
+import ProjectSubmission from '@/models/ProjectSubmission';
 
 export async function POST(request: Request) {
   try {
+    await dbConnect();
+    
     const data = await request.json();
     const { projectName, description, meetingTime, personName, email, contact } = data;
 
     if (!projectName || !description || !meetingTime || !personName || !email || !contact) {
       return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
     }
+
+    // Save to database
+    const submission = new ProjectSubmission({
+      projectName,
+      description,
+      meetingTime: new Date(meetingTime),
+      personName,
+      email,
+      contact
+    });
+
+    await submission.save();
 
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
       console.error('Email credentials not configured');
@@ -29,7 +45,7 @@ export async function POST(request: Request) {
       subject: 'Project Submission Confirmation - Brixon Tech',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #4A53FF;">Thank You for Your Submission!</h2>
+          <h2 style="color: #101A29;">Thank You for Your Submission!</h2>
           <p>Dear ${personName},</p>
           <p>We have received your project submission and our team will review it shortly.</p>
           
@@ -53,7 +69,7 @@ export async function POST(request: Request) {
       subject: `New Project Submission: ${projectName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #4A53FF;">New Project Submission</h2>
+          <h2 style="color: #101A29;">New Project Submission</h2>
           
           <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="margin-top: 0;">Project Information:</h3>

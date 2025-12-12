@@ -107,7 +107,7 @@
 
 .formGroup input:focus,
 .formGroup textarea:focus {
-  border-color: #4A53FF;
+  border-color: #101A29;
 }
 
 .formGroup textarea {
@@ -117,7 +117,7 @@
 
 .submitBtn {
   font-family: "Plus Jakarta Sans", sans-serif;
-  background: linear-gradient(135deg, #4A53FF, #1F2463);
+  background: #101A29;
   color: white;
   padding: 1rem 2rem;
   border: none;
@@ -131,7 +131,7 @@
 
 .submitBtn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(74, 83, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(16, 26, 41, 0.3);
 }
 
 .submitBtn:disabled {

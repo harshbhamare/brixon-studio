@@ -46,7 +46,7 @@ export default function RefundPolicy() {
           <h2>4. Refund Process</h2>
           <p>To request a refund:</p>
           <ul>
-            <li>Contact us at refunds@brixontech.com with your project details</li>
+            <li>Contact us at brixontech@gmail.com with your project details</li>
             <li>Provide a clear explanation of the reason for the refund request</li>
             <li>Allow 5-7 business days for review</li>
             <li>Approved refunds will be processed within 10-14 business days</li>
@@ -71,8 +71,8 @@ export default function RefundPolicy() {
         <section className={styles.section}>
           <h2>7. Contact Us</h2>
           <p>For refund inquiries, please contact:</p>
-          <p>Email: refunds@brixontech.com</p>
-          <p>Phone: +91 XXXXXXXXXX</p>
+          <p>Email: brixontech@gmail.com</p>
+          <p>Phone: +91 7387883221</p>
         </section>
       </div>
     </div>

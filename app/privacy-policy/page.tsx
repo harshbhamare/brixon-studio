@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
         <section className={styles.section}>
           <h2>7. Contact Us</h2>
           <p>If you have questions about this Privacy Policy, please contact us at:</p>
-          <p>Email: privacy@brixontech.com</p>
+          <p>Email: brixontech@gmail.com</p>
         </section>
       </div>
     </div>
