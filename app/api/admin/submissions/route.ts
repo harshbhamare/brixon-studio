@@ -4,6 +4,11 @@ import ProjectSubmission from '@/models/ProjectSubmission';
 
 export async function GET() {
   try {
+    // Check if MongoDB URI is available
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json({ submissions: [] });
+    }
+
     await dbConnect();
     
     const submissions = await ProjectSubmission.find({}).sort({ createdAt: -1 });
@@ -17,6 +22,11 @@ export async function GET() {
 
 export async function PUT(request: Request) {
   try {
+    // Check if MongoDB URI is available
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json({ error: 'Database not configured' }, { status: 500 });
+    }
+
     await dbConnect();
     
     const { id, status, notes } = await request.json();

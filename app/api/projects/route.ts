@@ -4,6 +4,11 @@ import Project from '@/models/Project';
 
 export async function GET(request: Request) {
   try {
+    // Check if MongoDB URI is available
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json({ projects: [] });
+    }
+
     await dbConnect();
     
     const { searchParams } = new URL(request.url);
@@ -38,6 +43,11 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
+    // Check if MongoDB URI is available
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json({ error: 'Database not configured' }, { status: 500 });
+    }
+
     await dbConnect();
     
     const data = await request.json();

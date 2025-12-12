@@ -5,8 +5,6 @@ import ProjectSubmission from '@/models/ProjectSubmission';
 
 export async function POST(request: Request) {
   try {
-    await dbConnect();
-    
     const data = await request.json();
     const { projectName, description, meetingTime, personName, email, contact } = data;
 
@@ -14,17 +12,26 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
     }
 
-    // Save to database
-    const submission = new ProjectSubmission({
-      projectName,
-      description,
-      meetingTime: new Date(meetingTime),
-      personName,
-      email,
-      contact
-    });
+    // Save to database if MongoDB is configured
+    if (process.env.MONGODB_URI) {
+      try {
+        await dbConnect();
+        
+        const submission = new ProjectSubmission({
+          projectName,
+          description,
+          meetingTime: new Date(meetingTime),
+          personName,
+          email,
+          contact
+        });
 
-    await submission.save();
+        await submission.save();
+      } catch (dbError) {
+        console.error('Database save error:', dbError);
+        // Continue with email sending even if database fails
+      }
+    }
 
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
       console.error('Email credentials not configured');

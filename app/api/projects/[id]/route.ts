@@ -4,6 +4,11 @@ import Project from '@/models/Project';
 
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
+    // Check if MongoDB URI is available
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json({ error: 'Database not configured' }, { status: 500 });
+    }
+
     await dbConnect();
     
     const { id } = await params;
@@ -22,6 +27,11 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
 export async function PUT(request: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
+    // Check if MongoDB URI is available
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json({ error: 'Database not configured' }, { status: 500 });
+    }
+
     await dbConnect();
     
     const { id } = await params;
@@ -46,6 +56,11 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
 
 export async function DELETE(request: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
+    // Check if MongoDB URI is available
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json({ error: 'Database not configured' }, { status: 500 });
+    }
+
     await dbConnect();
     
     const { id } = await params;
