@@ -22,13 +22,13 @@ export default function HeroSupport() {
         <p className={styles.subtitle}>
           We help brands move beyond basic websites and inconsistent marketing.
           With strategy-driven design, development, and growth services, we build
-          digital assets that work — even when you aren't.
+          digital assets that work - even when you aren't.
         </p>
 
         <ul className={styles.list}>
-          <li>Built for conversions</li>
-          <li>Designed for real business growth</li>
-          <li>Managed with measurable performance</li>
+          <li>Built to convert traffic into qualified leads</li>
+          <li>Engineered for speed, clarity, and user intent</li>
+          <li>Optimized for search, performance, and scalability</li>
           <li>Designed for real business growth</li>
           <li>Managed with measurable performance</li>
         </ul>

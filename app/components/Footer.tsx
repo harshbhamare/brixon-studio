@@ -24,21 +24,21 @@ export default function Footer() {
           </p>
 
           <div className={styles.social}>
-            <a href="#"><Image src="/images/footer/linkedin.png" width={22} height={22} alt="LinkedIn"/></a>
+            <a href="https://www.linkedin.com/in/brixontech/"><Image src="/images/footer/linkedin.png" width={22} height={22} alt="LinkedIn"/></a>
             <a href="#"><Image src="/images/footer/whatsapp.png" width={22} height={22} alt="Instagram"/></a>
-            <a href="#"><Image src="/images/footer/instagram.png" width={22} height={22} alt="WhatsApp"/></a>
+            <a href="https://wa.me/917387883221?text=Hello"><Image src="/images/footer/instagram.png" width={22} height={22} alt="WhatsApp"/></a>
           </div>
         </div>
 
         {/* Links Section */}
         <div className={styles.linksSection}>
 
-          <div className={styles.linkColumn}>
+          {/* <div className={styles.linkColumn}>
             <h4>Quick Links</h4>
             <a href="#">Institute</a>
             <a href="#">Faculty</a>
             <a href="#">Student</a>
-          </div>
+          </div> */}
 
           <div className={styles.linkColumn}>
             <h4>Company</h4>

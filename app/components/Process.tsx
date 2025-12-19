@@ -24,7 +24,7 @@ export default function WorkSection() {
             title: "Discovery Call", 
             desc: "Understand your goals",
             details: "We dive deep into your business objectives, target audience, and project requirements to create a solid foundation.",
-            iconPath: "/images/process/discovery.png"
+            iconPath: "/images/process/telephone.png"
           },
           { 
             num: "02", 
@@ -38,14 +38,14 @@ export default function WorkSection() {
             title: "Design & Build", 
             desc: "UI/UX + development",
             details: "Iterative design process with regular feedback loops, followed by clean, scalable development.",
-            iconPath: "/images/process/design.png"
+            iconPath: "/images/process/bricks.png"
           },
           { 
             num: "04", 
             title: "Launch & Optimize", 
             desc: "Test, deploy & refine",
             details: "Thorough testing, smooth deployment, and continuous optimization based on real user data.",
-            iconPath: "/images/process/launch.png"
+            iconPath: "/images/process/startup.png"
           }
         ].map((step, i) => (
           <motion.div 

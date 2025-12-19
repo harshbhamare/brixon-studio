@@ -47,7 +47,7 @@ export default function Services() {
             />
             <h3 className={styles.cardTitle}>Website Design & Development</h3>
             <p className={styles.cardDesc}>
-              Websites built for performance, SEO, and conversion — not just aesthetics.
+              Websites built for performance, SEO, and conversion - not just aesthetics.
             </p>
           </motion.div>
 
@@ -120,9 +120,9 @@ export default function Services() {
               </p>
 
               <ul className={styles.bullets}>
-                <li>Built for conversions</li>
-                <li>Designed for real business growth</li>
-                <li>Managed with measurable performance</li>
+                <li>Content built to attract and qualify the right audience</li>
+                <li>Lead-focused campaigns, not vanity engagement</li>
+                <li>Organic content that feeds paid performance</li>
               </ul>
             </div>
           </motion.div>
